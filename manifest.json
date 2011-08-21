@@ -1,0 +1,24 @@
+{
+  "name": "Github's Missing Attachment Feature",
+  "version": "0.1",
+  "description": "Adds image (and other file) attachments to Github's Issue Tracker",
+  "permissions": [
+    "tabs",
+    "http://s3.amazonaws.com/",
+    "http://*.s3.amazonaws.com/",
+    "https://s3.amazonaws.com/",
+    "https://*.s3.amazonaws.com/"
+  ],
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": [
+      "jquery.min.js", 
+      "jquery.blockUI.js",
+      "sha1.js",
+      "S3Ajax.js",
+      "attach.js"
+    ]
+  }]
+
+}
+
